@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>Duck3.jpg</filename>
+	<path>C:\Users\danie\Repos\Uni\Honours\Object-Detection_Python_Honours_4th_Year\workspace\training_setup\images\Duck3.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>570</width>
+		<height>428</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Duck</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>186</xmin>
+			<ymin>51</ymin>
+			<xmax>418</xmax>
+			<ymax>326</ymax>
+		</bndbox>
+	</object>
+</annotation>

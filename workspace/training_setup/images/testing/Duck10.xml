@@ -1,0 +1,26 @@
+<annotation>
+	<folder>testing</folder>
+	<filename>Duck10.jpg</filename>
+	<path>C:\Users\danie\Repos\Uni\Honours\Object-Detection_Python_Honours_4th_Year\workspace\training_setup\images\testing\Duck10.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>570</width>
+		<height>415</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Cockroach</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>62</xmin>
+			<ymin>95</ymin>
+			<xmax>532</xmax>
+			<ymax>324</ymax>
+		</bndbox>
+	</object>
+</annotation>
