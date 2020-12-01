@@ -1,34 +1,4 @@
 item {
-    id: 1
-    name: 'Duck'
-}
-
-item {
-    id: 2
-    name: 'Cockroach'
-}
-
-item {
-    id: 3
-    name: 'Lego'
-}
-
-item {
-    id: 4
-    name: 'Mens Underwear'
-}
-
-item {
-    id: 5
-    name: 'Mug'
-}
-
-item {
-    id: 6
-    name: 'Pineapple'
-}
-
-item {
-    id: 7
-    name: 'Banana'
+	id: 1
+	name: 'Duck'
 }
