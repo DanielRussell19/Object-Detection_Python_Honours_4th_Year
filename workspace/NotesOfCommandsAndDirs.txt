@@ -1,0 +1,30 @@
+#Noted commands for ease of use#
+#Originally planned for use in automating the training, evaluation and export process#
+#Daniel Russell#
+
+#model directories#
+modeldir_FasterRCNN = 'models/faster_rcnn_resnet50_v1_640x640_coco17_tpu-8'
+pipelinedir_FasterRCNN = 'models/faster_rcnn_resnet50_v1_640x640_coco17_tpu-8/pipeline.config'
+
+modeldir_EfficientDet = 'models/efficientdet_d0_coco17_tpu-32'
+pipelinedir_EfficientDet = 'models/efficientdet_d0_coco17_tpu-32/pipeline.config'
+
+modeldir_YOLO = 'models/x'
+pipelinedir_YOLO = 'models/x'
+
+#Noted commands#
+--train--
+python model_main_tf2.py --model_dir=models/faster_rcnn_resnet50_v1_640x640_coco17_tpu-8 --pipeline_config_path=models/faster_rcnn_resnet50_v1_640x640_coco17_tpu-8/pipeline.config --checkpoint_every_n=3 --num_workers=4 --alsologtostderr
+
+python model_main_tf2.py --model_dir=models/efficientdet_d0_coco17_tpu-32 --pipeline_config_path=models/efficientdet_d0_coco17_tpu-32/pipeline.config --checkpoint_every_n=3 --num_workers=4 --alsologtostderr
+
+--export--
+python export_inference_graph.py --input_type image_tensor --pipeline_config_path ssd_mobilenet_v2_coco.config --trained_checkpoint_prefix  train/model.ckpt-<the_highest_checkpoint_number> --output_directory fine_tuned_model
+
+--evaluation--
+python model_main_tf2.py --model_dir=models/faster_rcnn_resnet50_v1_640x640_coco17_tpu-8 --pipeline_config_path=models/faster_rcnn_resnet50_v1_640x640_coco17_tpu-8/pipeline.config --alsologtostderr checkpoint_dir=
+
+python model_main_tf2.py --model_dir=models/efficientdet_d0_coco17_tpu-32 --pipeline_config_path=models/efficientdet_d0_coco17_tpu-32/pipeline.config --alsologtostderr --checkpoint_dir=models/efficientdet_d0_coco17_tpu-32
+
+--tensorboard--
+tensorboard --logdir ./
