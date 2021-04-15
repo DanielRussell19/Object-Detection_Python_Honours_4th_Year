@@ -1,3 +1,0 @@
-EfficentDet Time(Seconds):967.1969201564789
-ResNet Time(Seconds):1593.8823113441467
-FasterRcNN Time(Seconds):1605.3853857517242
